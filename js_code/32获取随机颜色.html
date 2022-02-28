@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		//1.获取min到max之间的整数(1~100)
+		function random(max,min) {
+			return Math.floor(Math.random()*(max-min)+min);
+		}
+		//2.获取随机颜色rgb(0~255,0~255,0~255)
+		function randomColor(){
+			var r=random(0,256),g=random(0,256),b=random(0,256);
+			//模版字符串
+			var result=`rgb(${r},${g},${b})`;
+			return result;
+		}	
+		var rc=randomColor();
+			console.log(rc);
+			document.body.style.backgroundColor=rc;
+
+			//3.随机验证码
+			function createCode(){
+				//设置默认的空字符串
+				var code='';
+				//设置长度
+				var codeLength=4;
+				var randomCode=[0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E',
+				'F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','W','X','Y','Z'];
+				for (var i = 0; i < code.length; i++) {
+					//设置随机范围0~36
+					var index=random(0,36);
+					code+=randomCode[index];
+
+				}
+				return code;
+			}
+			var rndcode=createCode();
+			console.log(rndcode);
+			document.write(`<h1>${rndcode}</h1>`);
+	</script>
+</body>
+</html>

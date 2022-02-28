@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function nowNumTime() {
+				var now=new Date();
+			var hour=now.getHours();
+			var minute=now.getMinutes();
+			var second=now.getSeconds();
+			var temp='' +(hour>12 ? hour-12 :hour);
+			console.log(temp);
+			if (hour==0) {
+				temp='12';
+			}
+			temp=temp+(minute<10 ? ':0':":" )+ minute;
+			temp=temp+(second<10 ? ':0':":" )+ second;
+			temp=temp+(hour>=12 ? ' P.M.':" A.M.");
+			return temp;
+		}
+		var nownum=nowNumTime();
+		console.log(nownum);
+	</script>
+</body>
+</html>

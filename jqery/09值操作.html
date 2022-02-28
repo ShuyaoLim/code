@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">
+        <ul>
+            <li>
+
+            </li>
+        </ul>
+        <input type="text" value="shuyao">
+        <select name="" id="single" single>
+            <option>yao</option>
+            <option>yuyuan</option>
+        </select>
+        <select name="" id="multiple" multiple>
+            <option selected>yao</option>
+            <option>yuan</option>
+            <option selected>yuyuan</option>
+        </select>
+        <input type="checkbox" value="A" >A
+        <input type="checkbox" value="B"> B
+        <input type="radio" value='1'>man
+        <input type="radio" value='0'>woman
+    </div>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function() {
+            console.log($('#content ul li').html());
+            //设置html的值
+            $('#content ul li').html(`<img src="相框.jpg" alt=""
+            <p>yuyuanboboyao</p>
+            <h3>shuyao</h3>`);
+            //仅仅获取文本的值
+            //console.log($('#content ul li').text());
+            //获取文本输入框的值
+            //console.log($('input[type=text]').val());
+           // $('input[type=text]').val('yuyuanboboyao');
+            $('#single').val('yao');
+            $('#multiple').val(['yuan','yuyuan']);
+            //给input设置值 要使用value属性值的值 不能使用文本的值
+            $('input').val(['B','0']);
+        })
+    </script>
+</body>
+</html>

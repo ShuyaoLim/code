@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text">
+    <select name="" id="select">
+        <option value="a"a></option>
+        <option value="b">b</option>
+    </select>
+    <input type="submit">
+    </form>
+    
+    <script src="./jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            $('input[type=text').change(function(){
+                console.log('值发生变化');
+                var val=$(this).val();
+                console.log(val);
+                if(/^\d{4}$/.test(val)){
+                    console.log('输入正确');
+                }else{
+                    console.log('输入错误');
+                    $(this).css('border-color','red');
+                }
+            })
+            $('#select').change(function(){
+                console.log($(this).val());
+            })
+            $('form').submit(function(event){
+                //onsole.log(11111);
+                //阻止默认行为
+                event.preventDefault();
+                console.log(1111);
+                var val=$('input[type=text').val();
+                var oval=$('#select').val();
+                console.log(val,oval);
+                
+            })
+        })
+    </script>
+</body>
+</html>

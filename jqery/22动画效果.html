@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">显示</button>
+    <div class="box" style="width: 200px; height: 200px; background-color:red;">
+        yuyuanboboyao
+    </div>
+    <script src="./jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            $('#btn').click(function(){
+                //$('.box').hide('normal');
+                // $('.box').fadeOut(400);
+                // $('.box').slideDown(400);
+                //$('.box').fadeTo(400,0.3);
+                //$('.box').toggle(400);
+                //$('.box').slideToggle(400);
+                $('.box').animate({
+                    width:300,
+                    height:300,
+                    "font-size":40
+                },1000,function(){
+                    
+                })
+
+            })
+        })
+    </script>
+</body>
+</html>

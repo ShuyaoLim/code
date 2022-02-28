@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css选择器权重深入</title>
+	<style type="text/css">
+	/*003*/
+		p{
+			color: gray;
+		}
+		/*001*/
+		div div p{
+			color: yellow;
+		}
+		/*010*/
+		.active{
+			color: purple;
+		}
+		div .active{
+			color: black;
+		}
+		div div .active{
+			color: blue;
+		}
+		.wrap1 #box2 .active{
+			color: green;
+		}
+		#box1 #box2 p{
+			color: red;
+		}
+		/*继承来的属性 它的权重非常低 0*/
+		#box1 #box2 #box3{
+			color: orange;
+		}
+</style>
+</head>
+<body>
+	<div class="wrap1" id="box1">
+		<div class="wrap2" id="box2">
+			<div class="wrap3" id="box3"></div>
+			<p class="active">
+				mjj是什么颜色
+			</p>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">yuyuanboboyao</div>
+    <script src="index.js"></script>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        //jquery提供了一个解决多个库变量名冲突的方法
+        jQuery.noConflict(); //将Jquey的$变量控制权交给index.js
+        console.log($);
+        (function (param$) {
+            jQuery(function () {
+                jQuery('#box').css('color','red');                
+            })
+        })(jQuery);
+    </script>
+</body>
+</html>

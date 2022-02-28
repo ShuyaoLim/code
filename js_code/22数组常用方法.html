@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		// var arr=[1,2,3];
+		// var a=arr.toString();
+		// var b=arr.toLocaleString();
+		// console.log(a);
+		// console.log(b);
+		// var person1={
+		// 	toLocaleString:function () {
+		// 		return 'yuyuan';
+		// 	},
+		// 	toString:function(){
+		// 		return 'boboyao';
+		// 	}
+		// }
+		// var person2={
+		// 	toLocaleString:function () {
+		// 		return 'yu';
+		// 	},
+		// 	toString:function(){
+		// 		return 'shuyao';
+		// 	}
+		// }
+		// var people=[person1,person2];
+		// console.log(people);
+		// console.log(people.toString());
+		// console.log(people.toLocaleString());
+		//分割字符串
+		var colors=['red','blue','green'];
+		var a =colors.join(',');
+		console.log(a);
+
+		//栈	(lifo last-in-first-out)方法队列方法
+		//push()
+		var newLength=colors.push('purple');
+		console.log(newLength);
+		console.log(colors);
+		//pop()从数组的末尾删除
+		var lastItem=colors.pop();
+		console.log(lastItem);
+		//队列fifo先进先出shift() unshift()
+		newlength=colors.unshift('yellow');
+		console.log(newlength);
+		console.log(colors);
+		var firstItem=colors.shift();
+		console.log(firstItem);
+		console.log(colors);
+		//数组排序
+		 // var values=[0,3,2,16,15,,10];
+		// // values.reverse();
+		// // console.log(values);
+
+		// // values.sort();
+		// // console.log(values);
+		// function compare1(a,b){
+		// 	//a位于b之前
+		// 	if (a<b) {
+		// 		return -1;
+		// 	}else if (a>b) {
+		// 		return 1;
+		// 	}else{
+		// 		return 0;
+		// 	}
+		// 	return a-b;
+		// }
+		// function compare2(a,b){
+		// 	return b-a;
+		// }
+		// values.sort(compare2);
+		// console.log(values);
+		// values.sort(compare); //升序
+		// console.log(values);
+
+		//操作方法 concat() slice() splice()
+		//1.concat()数组合并
+		var colors=['red','blue'];
+		// var newColors=colors.concat('green');
+		// newColors=colors.concat({name:'zhangsan'});
+		//2.slice()讲当前数组中的一个或者多个项创建一个新的数组
+		var newColors=colors.concat({name:"list"},['black','purple']);
+		console.log(newColors);
+		newcolors=newColors.slice(-2,-1); //slice(3,4)
+		console.log(newcolors);
+
+
+		//3.splice()删除 插入 替换
+		//3.1删除
+		//var names=['张三','李四','yuyuan','boboyao'];
+		// names.splice(0,2);
+		// console.log(names);
+
+		//3.2插入
+		// names.splice(1,0,'yu');
+		// console.log(names);
+		//3.3替换
+		// names.splice(1,1,'yuan');
+		// console.log(names);
+
+
+
+		//位置方法 indexof() lastIndexOf()
+
+		// var names=['张三','李四','yuyuanboboyao','boboyao','yuyuanboboyao'];
+		// alert(names.indexOf('yuyuanboboyao'));
+		// alert(names.lastIndexOf('yuyuanboboyao'));
+		// alert(names.indexOf('yuyuanboboyao',2));
+		// alert(names.lastIndexOf('ssss'),2); //查不到结果返回-1
+
+		//5.迭代方法
+		//5.1filter()
+		var numbers=[1,2,3,6,19,4,20];
+		var filterResult=numbers.filter(function(item,index,array){
+			return item>10;
+		});
+		console.log(filterResult);
+		//5.2map()方法
+		var mapresult=numbers.map(function(item,index,array){
+			return item*2;
+		})
+		console.log(mapresult);
+
+		for (var i = 0; i < mapresult.length; i++) {
+			// console.log(mapresult[i]);
+		}
+		//5.3forEach()
+		mapresult.forEach(function(item,index){
+			console.log(item);
+		})
+
+
+
+
+
+
+
+
+
+			</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        button{
+           background-color: #fff; 
+        }
+    </style> -->
+</head>
+<body>
+    <ul>
+        <li>
+            <button>按钮1</button>
+        </li>
+        <li>
+            <button>按钮2</button>
+        </li>
+        <li>
+            <button>按钮3</button>
+        </li>
+        <li>
+            <button>按钮4</button>
+        </li>
+        <li>
+            <button>按钮5</button>
+        </li>
+    </ul>
+ 
+    
+   
+   
+
+    <script src="jquery-3.4.1.js"></script>
+    <!--siblings-->
+    <script>
+            $('button').click(function() {
+                //$(this).css('background-color','red').siblings('botton').css('background-color','#fff');
+                $(this).css('background-color','red').parent().siblings('li').children().css('background-color','#fff');
+            })
+    </script>
+</body>
+</html>

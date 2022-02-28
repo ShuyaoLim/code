@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div name='b' class="active">
+    </div>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            //设置单个属性值
+            // $('div').attr('id','box');
+            $('div').attr({id:'box',title:'盒子'});
+            console.log($('div').attr('name'));
+            console.log($('div').attr('class'));
+            setTimeout(function () {
+                $('img').attr({
+                    src:"./相框.jpg"
+                })
+            },2000)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <p>shuyao</p>
+        <h3>yuyuan</h3>
+        <ul>
+            <li>yuyuanboboyao</li>
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+            <li>d</li>
+        </ul>
+    </div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function() {
+            //获取匹配元素的子元素（children）集合
+            console.log($('.box').children());
+            console.log($('box').next());
+            console.log($('ul li').parent());
+            console.log($('ul li').parents());
+            console.log($('.box2').prev());
+            $('ul li').eq(2).css('color','red');
+        })
+    </script>
+</body>
+</html>

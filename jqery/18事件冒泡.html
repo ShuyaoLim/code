@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            
+        }
+        h3{
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3>冒泡</h3>
+    </div>
+    <script src="./jquery-3.4.1.js"></script>
+    <script>
+        $('.box').click(function(){
+            alert('父元素点击了');
+        })
+        $('h3').click(function(event){
+            //阻止冒泡
+            event.stopPropagation();
+            alert('子点击了');
+        })
+        $(document).click(function(){
+            alert('文档被点击了');
+        })
+    </script>
+</body>
+</html>

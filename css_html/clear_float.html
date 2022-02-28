@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>浮动元素的破坏性</title>
+	<style type="text/css">
+		.top_bar{
+			border:1px solid red;
+		}
+		.child{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			float: left;
+		}
+		.child2{
+			width: 200px;
+			height: 200px;
+			background-color: orange;
+			float: right;
+		}
+		.header{
+			width: 100%;
+			height: 100px;
+			background-color: purple;
+		}
+		.clear{
+			clear: both;
+		}
+		p::after{
+			content: 'a';
+		}
+		.clearfix::after{
+			content: 'a';
+			display: block;
+			clear: both;
+		}
+</style>
+</head>
+<body>
+	<!-- 1.给父元素设置固定高度
+			缺点:使用不灵活后期不易维护
+			应用:网页中盒子固定高度区域,比如固定的导航栏
+		2.内墙发
+			规则:在最后一个浮动元素的后面加一个空的块级元素,并且设置该属性clear：both;
+		3.伪元素(选择器)清楚
+		4.overflow:hidden;
+	 -->
+	<div class="top_bar clearfix">
+		<div class="child">儿子</div>
+		<div class="child2">二儿子</div>
+		<div class="clear"></div>
+	</div>
+	<div class="header"></div>
+	<p>
+		<a href="#">百度一下</a>
+
+	</p>
+</body>
+</html>

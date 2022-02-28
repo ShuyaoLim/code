@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3><yuyuanbobo</h3>
+    <div class="box">
+
+    </div>
+    <div class="wrap">
+        <button>按钮</button>
+    </div>
+    <div class="clone">
+        <ul>
+            <li>yuan</li>
+        </ul>
+    </div>
+    <div class="replace">
+        <p>hello</p>
+        <p>world</p>
+    </div>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            // $('.replace p').replaceWith('<i>hello</i>')
+            //$('.replace p').wrap('<div class="box2"></div>');
+            //$('.replace p').unwrap('<div class="box2"></div>');
+            $('.replace').wrapInner('<strong></strong');
+        })
+        $(function () {
+            var h3Tag=document.createElement('h3');
+            h3Tag.innerText='yuyuanboboyao';
+            var htmlStr='<h3>hello world</h3>';
+            // $('.box').append(htmlStr);
+            // $('.box').append($('h3'));
+           console.log( $('<h4>yao</h4').appendTo('.box'));
+            $('<h4>yao</h4>').appendTo('.box').css('color','green').click(function () {
+                console.log((this).text());
+                
+            });
+            $('.box').prepend('<a href="#">百度一下</a>');
+            
+            $('<a href="#">百度一下2</a>').prependTo('.box');
+            $('h3').after('<h1>yuyuan</h1>');
+            $('<h2>yu</h2>').insertAfter('h1');
+            $('button').click(function () {
+                // alert(1);
+                //即删除节点,又删除节点上的事件绑定
+                // var btnjq= $(this).remove();
+                //删除了节点,事件保留
+                // var btnjq=$(this).detach();
+                // $('.box').prepend(btnjq);
+                // $('.box').append(btnjq);
+                // $('.wrap').append($(this).remove());
+                // $(this).detach();
+                // $('.box').empty();
+                console.log($('.box').html());
+                //清空
+                $('.box').html('');
+
+            })
+            //克隆元素
+            $('.clone ul li').click(function () {
+                $(this).clone(true).appendTo('.clone ul');
+            })
+        })
+    </script>
+</body>
+</html>

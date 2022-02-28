@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .box{
+           width: 100px;
+           height: 40px;
+           background-color:bisque;
+           position: relative;
+       }
+       .box .content{
+           position: absolute;
+           width: 200px;
+           height: 200px;
+           top: 40px;
+           background-color: red;
+           display: none;
+       } 
+    </style>
+<body>
+    <div id="box" style="width: 200px; height:200px;background: red;">
+        <p style="background: green;">yuyuanboboyao</p>
+    </div>
+    <div class="box">
+        <div class="content"></div>
+    </div>
+    <script src="./jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            $('#box').mouseover(function(){
+                console.log('鼠标穿过了');
+            })
+            $('#box').mouseout(function(){
+                console.log('鼠标离开了');
+            })
+            $('.box').mouseover(function(){
+                console.log(11111);
+                $('.content').show()
+            })
+            $('.box').mouseout(function(){
+                $('.content').hide();   
+            })
+            $('.box').stop().slideDown(function(){
+                $('.content').hide();   
+            })
+            $('.box').mouseleave(function(){
+                $('.content').stop().slideUp();   
+            })
+        })
+    </script>
+</body>
+</html>

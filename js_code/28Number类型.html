@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var str='1231.8998928';
+	//字符串 数值类型
+	console.log(parseInt(str));
+	console.log(parseFloat(str));
+	console.log(Number(str));
+	var a=Number(str);
+	console.log(isNaN(a));
+
+	var num=1313.779;
+	console.log(num.toString());
+	console.log(String(num));
+
+	//隐式转换
+	console.log(''+num);
+	console.log(''.concat(num));
+	console.log(Number(num.toFixed(2)));
+
+</script>
+</body>
+</html>

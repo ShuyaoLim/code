@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box" style="width: 200px; height: 200px; background-color: red;">yuyuanboboyao</div>
+    <script src="./jquery-3.4.1.js"></script>
+    <script>
+        //readry()文档加载事件
+
+        $(function(){
+            // $('#box').click(function(){
+            //    // alert($(this).text());
+            //    $(this).hide(1000,function(){
+            //        alert($(this).text());
+            //    });
+            // })
+            // $('#box').dblclick(function(){
+            //     console.log('双击了');
+            // })
+            $('#box').mousedown(function(){
+                console.log('鼠标按下了');
+            });
+            $('#box').mouseup(function(){
+                console.log('鼠标抬起了');
+            })
+        })
+    </script>
+</body>
+</html>

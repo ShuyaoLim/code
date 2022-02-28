@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="weather">
+        <p class="cond_txt"></p>
+    </div>
+    <script src="./jquery-3.4.1.js"></script>
+    <script>
+       //https://free-api.qweather.com/s6/weather/now?location=shanghai&key=a371cc61c5db40d9b950c897fea7548f
+
+        $(function(){
+            $.ajax({
+                url:'https://free-api.qweather.com/s6/weather/now?location=shanghai&key=a371cc61c5db40d9b950c897fea7548f',
+                method:'get',
+                success:function(res){
+                    var status=res.HeWeather6[0].status;
+                    if(status==='ok'){
+                        var cond_txt=res.HeWeather6[0].now.cond_txt;
+                        $('#weather .cond_txt').html(cond_txt);
+                    }
+                    
+                }
+            })
+        })
+    </script>
+</body>
+</html>

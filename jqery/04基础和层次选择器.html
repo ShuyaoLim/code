@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <p id="p1">yuyuan</p>
+        <ul>
+            <li class="item1">yuyuanbobo</li>
+            <li class="itme2">yao</li>
+            <li class="itme3">yuyuanboboyao</li>
+        </ul>
+    </div>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        //jquery
+        //id
+        //class
+        //标签
+        //后代
+        //子代
+        //+
+        //～
+        //组合
+        console.log($('#p1'));
+        console.log($('.box'));
+        console.log($('.box #p1'));
+        console.log($('.box li'));
+        console.log($('.box>ul>li'));
+        console.log($('.item1+li'));//获取紧挨着的itme1这个li变迁的下一个标签
+        console.log($('.item1~li'));//除item1这个li标签之外的标签
+        console.log($('p,ul,li'));
+        console.log($('ul li:first'));
+        console.log($('ul li:last'));
+        console.log($('ul li:not(.item2)'));
+        console.log($('ul li:even'));
+        console.log($('ul li:odd'));
+        console.log($('ul li:eq(0)'));
+  </script>      
+</body>
+</html>

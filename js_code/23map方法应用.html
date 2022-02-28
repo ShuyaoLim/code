@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var oldArray=[
+			{
+			name:'zhangsan',
+			age:17
+		},
+			{
+			name:'yuyuan',
+			age:20
+		},
+			{
+			name:'lisi',
+			age:30
+		}
+		];
+		// var newNames=[];
+		// var newAges=[];
+		// for (var i = 0; i < oldArray.length; i++) {
+		// 	var myname=oldArray[i].name;
+		// 	var myage=oldArray[i].age;
+		// 	newNames.push(myname);
+		// 	newAges.push(myage);
+		// }
+		// console.log(newNames);
+		// console.log(newAges);
+		var newNames=oldArray.map(function(item,index){
+			return item.name;
+		})
+		var newAges=oldArray.map(function(item,index){
+			return item.age;
+		})
+		console.log(newNames);
+		console.log(newAges);
+	</script>
+</body>
+</html>
