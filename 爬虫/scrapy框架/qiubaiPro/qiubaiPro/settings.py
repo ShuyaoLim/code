@@ -18,7 +18,7 @@ USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
-#LOG_LEVEL='ERROR'
+LOG_LEVEL='ERROR'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -63,9 +63,11 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'qiubaiPro.pipelines.QiubaiproPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'qiubaiPro.pipelines.QiubaiproPipeline': 300,
+   'qiubaiPro.pipelines.mysqlPipeline': 301,
+    #300表示优先级,数值越小优先级越高
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
